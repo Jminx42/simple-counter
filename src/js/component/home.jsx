@@ -28,7 +28,7 @@ useEffect (() => {
 				}}>{showButtons ? "HIDE" : "SHOW"}</button>
 				</div>
 			</div>
-			<div className="row bg-dark justify-content-center align-items-center">
+			<div className="row bg-dark justify-content-center align-items-center rounded">
 				<SecondsBlock time={<i class="fa-regular fa-clock"></i>}/>
 				<SecondsBlock time={Math.floor(timer / 10000) % 10}/>
 				<SecondsBlock time={Math.floor(timer / 1000) % 10}/>
@@ -55,7 +55,20 @@ useEffect (() => {
 				</>
 				: null
 			}
-			
+			<div className="row m-3 justify-content-center p-3">
+				<div className="col-4 border border-primary p-3 rounded">
+					<div class="mb-3">
+						<label for="countdown" class="form-label">Countdown:</label>
+						<div class="input-group">
+							<input type="number" class="form-control" id="countdown" aria-describedby="basic-addon4"/>
+						</div>
+						<div class="form-text" id="basic-addon4">Enter a number to countdown from</div>
+					</div>
+					<div className="d-flex justify-content-center">
+						<button className="btn btn-primary mx-auto">Start Countdown</button>
+					</div>
+				</div>
+			</div>
 			
 		</div>
 	);
